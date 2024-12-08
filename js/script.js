@@ -23,11 +23,13 @@ const images = [
 ];
 let active = 0;
 
-let slideChange = (direction) => {
+let changeSlide = (direction) => {
   active += direction;
 
   if (active < 0) active = images.length - 1;
   if (active >= images.length) active = 0;
+
+  updateSlide();
 };
 
 let updateSlide = () => {
@@ -44,10 +46,22 @@ goImg.onclick = () => {
   let inputValue = Number(imgInput.value);
   imgInput.value = "";
 
-  if (inputValue < 1 && inputValue > images.length) {
+  if (inputValue >= 1 && inputValue < images.length) {
     active = inputValue - 1;
     updateSlide();
   } else {
-    alert('Invalid number')
+    alert("Invalid number");
   }
 };
+
+btnLeft.onclick = () => changeSlide(-1);
+btnRight.onclick = () => changeSlide(1);
+btnLeft2.onclick = () => changeSlide(-2);
+btnRight2.onclick = () => changeSlide(+2);
+
+number1.onclick = () => selectSlide(0);
+number2.onclick = () => selectSlide(1);
+number3.onclick = () => selectSlide(2);
+number4.onclick = () => selectSlide(3);
+number5.onclick = () => selectSlide(4);
+number6.onclick = () => selectSlide(5);
