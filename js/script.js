@@ -19,6 +19,35 @@ const images = [
   "./images/mac3.jpg",
   "./images/mac4.webp",
   "./images/mac5.webp",
-  "./images/mac6.webp"
+  "./images/mac6.webp",
 ];
 let active = 0;
+
+let slideChange = (direction) => {
+  active += direction;
+
+  if (active < 0) active = images.length - 1;
+  if (active >= images.length) active = 0;
+};
+
+let updateSlide = () => {
+  slide.src = images[active];
+  result.innerHTML = active + 1;
+};
+
+let selectSlide = (index) => {
+  active = index;
+  updateSlide();
+};
+
+goImg.onclick = () => {
+  let inputValue = Number(imgInput.value);
+  imgInput.value = "";
+
+  if (inputValue < 1 && inputValue > images.length) {
+    active = inputValue - 1;
+    updateSlide();
+  } else {
+    alert('Invalid number')
+  }
+};
