@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carusel</title>
     <link rel="stylesheet" href="style.css" />
     <script src="./js/script.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="carusel">
-            <img src="" alt="">
+      <div class="carusel">
+        <img id="slide" src="./images/mac1.webp" alt="" />
+        <div class="btns">
+          <button id="btn-2left">2 Left</button>
+          <button id="btn-left">Left</button>
+          <button id="btn-right">Right</button>
+          <button id="btn-2right">2 Right</button>
         </div>
+        <div class="text">
+          <h1>Image<span id="result">1</span></h1>
+        </div>
+        <div class="numbers">
+          <button class="number" id="number1">1</button>
+          <button class="number" id="number2">2</button>
+          <button class="number" id="number3">3</button>
+        </div>
+        <div class="input-section">
+          <input type="number" id="image-input" />
+          <button id="go-btn">Go</button>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
