@@ -24,10 +24,8 @@ const images = [
 let active = 0;
 
 let changeSlide = (direction) => {
-  active += direction;
+  active = (active + direction + images.length) % images.length;
 
-  if (active < 0) active = images.length - 1;
-  if (active >= images.length) active = 0;
 
   updateSlide();
 };
