@@ -18,8 +18,8 @@ const images = [
   "./images/mac2.webp",
   "./images/mac3.jpg",
   "./images/mac4.webp",
-  "./images/mac5.webp",
-  "./images/mac6.webp",
+  "./images/mac5.jpg",
+  "./images/mac6.jpg",
 ];
 let active = 0;
 
