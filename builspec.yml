@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing dependencies..."
+  build:
+    commands:
+      - echo "Build step..."
+  post_build:
+    commands:
+      - echo "Deploying to S3..."
+      - aws s3 cp index.html s3://sayullosproject/index.html
+
+artifacts:
+  files:
+    - index.html
